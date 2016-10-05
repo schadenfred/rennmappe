@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Vehicles
+%table
+  %thead
+    %tr
+      %th Vin
+      %th Make
+      %th Model
+      %th{:colspan => "3"}
+  %tbody
+    - @vehicles.each do |vehicle|
+      %tr
+        %td= vehicle.vin
+        %td= vehicle.make
+        %td= vehicle.model
+        %td= link_to 'Show', vehicle
+        %td= link_to 'Edit', edit_vehicle_path(vehicle)
+        %td= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Vehicle', new_vehicle_path

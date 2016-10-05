@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Vin:
+  = @vehicle.vin
+%p
+  %strong Make:
+  = @vehicle.make
+%p
+  %strong Model:
+  = @vehicle.model
+= link_to 'Edit', edit_vehicle_path(@vehicle)
+|
+= link_to 'Back', vehicles_path

@@ -1,0 +1,14 @@
+%section#pushmenu-right.pushmenu.pushmenu-right.side-menu
+  %a#menu-sidebar-close-icon.menu-close
+    %i.ion.ion-android-close
+  %h5.white Sign In
+  .sign-in
+    %input#email.input-sm.form-full{"aria-required" => "true", :name => "email", :placeholder => "Email", :type => "email", :value => ""}/
+    %input#password.input-sm.form-full{"aria-required" => "true", :name => "password", :placeholder => "Password", :type => "password", :value => ""}/
+    %input.btn.btn-md.btn-color-b.form-full{:type => "submit", :value => "Sign In"}/
+    %a Sign up instead?
+  %ul
+    %li
+      = link_to "terms", terms_path
+    %li
+      = link_to "privacy", privacy_path

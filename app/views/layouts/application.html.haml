@@ -1,0 +1,24 @@
+= yield
+
+/ !!!
+/ %html
+/   %head
+/     = render "head"
+
+/   %body
+/     / = render "preloader"
+/     / # = render "search_overlay"
+
+/     / = render "search_overlay_menu"
+/     / = render "side_menu"
+/     / .wrapper
+/     /   = render "header"
+/     = yield
+/     = javascript_include_tag "application"
+/     :javascript
+/       $.backstretch([
+/         "#{asset_path 'full/10.jpg'}"
+/         , "#{asset_path 'full/26.jpg'}"
+/         , "#{asset_path 'full/26.jpg'}"
+/       ], {duration: 3000, fade: 750});
+

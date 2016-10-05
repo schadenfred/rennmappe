@@ -1,0 +1,27 @@
+/ %section#intro.intro-fullscreen
+/   / Static Hero
+/   .intro-media.overlay-dark20
+/   .intro-caption-waper.dark-bg
+/     .intro-full-height.container
+/       .intro-content
+/         .intro-content-inner
+/           .intro-img-circle
+/             %img{:alt => "avatar01", :src => "img/avatar01.jpg"}/
+/           %h1.intro-title.mb-10
+/             %span.text-light Hi!, I am
+/             John Doe
+/           %h6.page-title-alt.mb-45 Web Designer  Developer
+/           %a.btn.btn-lg.btn-white.scroll-down{:href => "#Statement1"} Go My Resume
+/   / End Static Hero
+
+%section#intro
+  / Hero Slider Section
+  .flexslider.fullscreen-carousel.hero-slider-1
+    %ul.slides
+      = render "static/home/slide_1"
+      = render "static/home/slide_2"
+      = render "static/home/slide_3"
+      = render "static/home/slide_4"
+  / End Hero Slider Section
+.clearfix
+/ End Intro Section
