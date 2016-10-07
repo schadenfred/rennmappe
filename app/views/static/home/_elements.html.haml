@@ -1,0 +1,167 @@
+/ Tabs & Extra Elements
+%section#elements.section-padding.white-bg
+  .container.text-center
+    %h2.page-title
+      Tabs
+      %span.text-light &amp;
+      Elements
+  .container
+    %ul.tabs-nav.alt-icon-tab.text-center
+      %li.mb-30.active
+        %a{"data-toggle" => "tab", :href => "#tab-video"}
+          .alt-icon-top
+            %i.icon.icon-basic-video
+          %h6 Video
+      %li.mb-30
+        %a{"data-toggle" => "tab", :href => "#tab-image-slider"}
+          .alt-icon-top
+            %i.icon.icon-basic-picture
+          %h6 Image Slider
+      %li.mb-30
+        %a{"data-toggle" => "tab", :href => "#tab-icon-box"}
+          .alt-icon-top
+            %i.icon.icon-basic-spades
+          %h6 Icon Box
+      %li.mb-30
+        %a{"data-toggle" => "tab", :href => "#tab-content-box"}
+          .alt-icon-top
+            %i.icon.icon-basic-webpage-txt
+          %h6 Content Box
+      %li.mb-30
+        %a{"data-toggle" => "tab", :href => "#tab-cover-box"}
+          .alt-icon-top
+            %i.icon.icon-basic-webpage-multiple
+          %h6 Cover Box
+    .tabs-cont
+      #tab-video.tab-pane.active
+        .row
+          /
+            <div class="col-md-6">
+            <div class="media">
+            <iframe src="https://player.vimeo.com/video/37298913?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+          .col-md-10.col-md-offset-1
+            .media
+              / %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/k9EyPfc0FXc?rel=0&controls=0&showinfo=0"}
+      #tab-image-slider.tab-pane
+        .row
+          .col-md-10.col-md-offset-1
+            .owl-carousel.image-carousel.nf-carousel-theme.white
+              .item
+                %img{:alt => "", :src => asset_path("full/06.jpg")}/
+              .item
+                %img{:alt => "", :src => asset_path("full/14.jpg")}/
+              .item
+                %img{:alt => "", :src => asset_path("full/09.jpg")}/
+      #tab-icon-box.tab-pane
+        .row
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-left
+              .alt-icon-left
+                %i.icon.icon-basic-cup
+              %h5.features-title Branding Design
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-left
+              .alt-icon-left
+                %i.icon.icon-basic-life-buoy
+              %h5.features-title Web Design
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-right
+              .alt-icon-right
+                %i.icon.icon-basic-lightbulb
+              %h5.features-title App Development
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-left
+              .alt-icon-left
+                %i.icon.icon-basic-star
+              %h5.features-title Graphic Design
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-left
+              .alt-icon-left
+                %i.icon.icon-ecommerce-graph1
+              %h5.features-title Landscape Photography
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+          .col-md-4.col-sm-6.col-xs-12.mb-sm-30
+            .content-box.alt-right
+              .alt-icon-right
+                %i.icon.icon-music-play-button
+              %h5.features-title Photo Editing
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.
+      #tab-content-box.tab-pane
+        .container.text-center
+          .row
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-color
+                  %i.icon.icon-basic-accelerator
+                %h5.features-title Branding Design
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-color
+                  %i.icon.icon-basic-cup
+                %h5.features-title Web Design
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-color
+                  %i.icon.icon-basic-anchor
+                %h5.features-title App Development
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-black
+                  %i.icon.icon-basic-globe
+                %h5.features-title Graphic Design
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-black
+                  %i.icon.icon-basic-gear
+                %h5.features-title Photography
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+            .col-md-4.col-sm-6.col-xs-12.mb-30
+              .content-box.content-box-with-bg
+                .icon-top.icon-black
+                  %i.icon.icon-basic-paperplane
+                %h5.features-title Photo Editing
+                %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.
+      #tab-cover-box.tab-pane
+        .container
+          .row
+            .col-md-4
+              .cover-box.mb-30
+                %figure.cover-box-img
+                  %img{:alt => "cover-img", :src => asset_path("portfolio/thumb/09.jpg")}/
+                .cover-box-content
+                  %h5 Responsive Design
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime
+                  %a.link
+                    Read More
+                    %i.fa.fa-angle-right.right
+            .col-md-4
+              .cover-box.mb-30
+                %figure.cover-box-img
+                  %img{:alt => "cover-img", :src => asset_path("portfolio/thumb/06.jpg")}/
+                .cover-box-content
+                  %h5 App Development
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime
+                  %a.link
+                    Read More
+                    %i.fa.fa-angle-right.right
+            .col-md-4
+              .cover-box.mb-30
+                %figure.cover-box-img
+                  %img{:alt => "cover-img", :src => asset_path("portfolio/thumb/05.jpg")}/
+                .cover-box-content
+                  %h5 Photography
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime
+                  %a.link
+                    Read More
+                    %i.fa.fa-angle-right.right
+/ End Tabs & Extra Elements

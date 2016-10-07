@@ -1,24 +1,11 @@
-
-/ Header
-%header#header.header
-  .container.header-inner
-    / Logo
+#header.header
+  .header-inner
     .logo
-      %a{:href => "index.html"}
-        = image_tag "logo-mochilla-white.png", alt: "Mazel", class: "logo-light"
-        / %img.logo-light{:alt => "Mazel", :src => "img/logo-white.png"}/
-        = image_tag "logo-mochilla-large.png", alt: "Mazel", class: "logo-dark"
-        / %img.logo-dark{:alt => "Mazel", :src => "img/logo-black.png"}/
-    / End Logo
-    / Rightside Menu (Search, Cart, Bart icon)
-
-    / End Rightside Menu
-    / Mobile Navbar Icon
-    .nav-mobile.nav-bar-icon
-      %span
-    / End Mobile Navbar Icon
-    / Navbar Navigation
-    .nav-menu
+      %a{:href => "#"}
+        %img{:src => asset_path("logo-mochilla-white.png")}/
+    .nav-menu-icon
+      %a
+        %i.fa.fa-bars
+    .nav-menu.singlepage-nav
       %ul.nav-menu-inner
-        %li
-          = link_to "about"
+        %li= link_to "about", "#about"
