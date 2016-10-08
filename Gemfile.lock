@@ -301,6 +301,9 @@ GEM
       websocket (~> 1.0)
     sexp_processor (4.7.0)
     shellany (0.0.1)
+    simple_form (3.3.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     slop (3.6.0)
     sorcerer (1.0.2)
     spring (1.7.2)
@@ -373,6 +376,7 @@ DEPENDENCIES
   rails-assets-tether (>= 1.1.0)!
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+
   def about
   end
 
@@ -18,6 +19,9 @@ class StaticController < ApplicationController
   end
 
   def terms
+  end
+
+  def sweet_thanks
   end
 
   def sample

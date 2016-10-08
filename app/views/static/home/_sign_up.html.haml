@@ -1,0 +1,10 @@
+%section#sign-up-form.section-padding.white-bg.text-center
+  .container.mb-60
+    .row.text-center
+      = render "messages"
+      %h2 Sign up
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        = f.input :email, autofocus: true
+        = f.button :submit, "Sign up", class: "btn btn-default btn-block"
+      / = render "devise/shared/links"
