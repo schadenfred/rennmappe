@@ -1,0 +1,28 @@
+/ / - static_page_links.each do |page|
+/ /   %li=link_to page.capitalize, send("#{page}_path")
+
+/ - if user_signed_in?
+/   %li= link_to 'home', root_path
+/   / %li= link_to 'dashboard', dashboard_path
+/   %li= link_to "sign out #{current_user.email}", destroy_user_session_path, method: 'delete'
+/ - else
+/   %li= link_to 'Sign in', new_user_session_path
+/ - static_section_links.each do |section|
+/   %li=link_to section.capitalize, "##{section}", class: "section-scroll"
+
+/ \# views/devise/menu/_login_items.html.erb
+%li
+  = link_to('home', "#intro")
+- if user_signed_in?
+  %li
+    = link_to('sign out', destroy_user_session_path)
+- else
+  %li
+    = link_to('sign in', "#sign-in-form")
+
+- if user_signed_in?
+  %li
+    = link_to('Edit registration', edit_user_registration_path)
+- else
+  %li
+    = link_to('sign up', "#sign-up-form")

@@ -1,13 +1,8 @@
 module StaticHelper
-  def resource_name
-    :user
-  end
 
-  def resource
-    @resource ||= User.new
-  end
 
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:user]
+  def static_section_links
+    # team
+    %w[about wineries team pricing]
   end
 end

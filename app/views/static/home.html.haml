@@ -2,15 +2,16 @@
   .wrapper
     = render "static/home/intro"
     = render "static/home/sign_up"
+    %hr/
+    = render "static/home/sign_in"
     / = render "static/home/about"
     / = render "static/home/section"
     / = render "static/home/team"
-    / %hr/
     / = render "static/home/accordion"
     / = render "static/home/testimonials"
     / = render "static/home/process"
-    / %hr/
-    / = render "static/home/portfolio"
+    %hr/
+    = render "static/home/portfolio"
     / = render "static/home/action_box"
     / = render "static/home/service"
     / = render "static/home/counter"
@@ -57,37 +58,34 @@
     /             +40 (0) 012 345 6789
     / / End Contact Info Section
     / / Footer Section
-    / %footer#footer.footer.section-padding.gray-bg
-    /   .container.text-center
-    /     / Footer Logo
-    /     .footer-logo.mb-25.wow.fadeInUp{"data-wow-duration" => "1.5s"}
-    /       %a.scroll-top{:href => "#intro"}
-    /         %img{:alt => "mazel", :src => asset_path("logo-dark.png")}/
-    /     / End Footer Logo
-    /     / Copyright
-    /     %p.copyright.mb-25
-    /       © 2015
-    /       = succeed "." do
-    /         %a
-    /           %b Mazel Template
-    /       %br/
-    /       Template by
-    /       %a{:href => "http://nileforest.com/", :target => "_blank"}
-    /         %b nileforest
-    /     / Copyright
-    /     / Social
-    /     %ul.social
-    /       %li
-    /         %a{:href => "https://www.facebook.com/", :target => "_blank"}
-    /           %i.fa.fa-facebook
-    /       %li
-    /         %a{:href => "https://www.twitter.com/", :target => "_blank"}
-    /           %i.fa.fa-twitter
-    /       %li
-    /         %a{:href => "https://www.linkedin.com/", :target => "_blank"}
-    /           %i.fa.fa-linkedin
-    /       %li
-    /         %a{:href => "https://plus.google.com/", :target => "_blank"}
-    /           %i.fa.fa-google-plus
+    %footer#footer.footer.section-padding.gray-bg
+      .container.text-center
+        / Footer Logo
+        .footer-logo.mb-25.wow.fadeInUp{"data-wow-duration" => "1.5s"}
+          %a.scroll-top{:href => "#intro"}
+            %img{:alt => "mazel", :src => asset_path("logo-mochilla-large.png")}/
+        / End Footer Logo
+        / Copyright
+        %p.copyright.mb-25
+          © 2015
+          / # = succeed "." do
+          %a
+            %b Mochil.la
+          %br/
+        / Copyright
+        / Social
+        / %ul.social
+        /   %li
+        /     %a{:href => "https://www.facebook.com/", :target => "_blank"}
+        /       %i.fa.fa-facebook
+        /   %li
+        /     %a{:href => "https://www.twitter.com/", :target => "_blank"}
+        /       %i.fa.fa-twitter
+        /   %li
+        /     %a{:href => "https://www.linkedin.com/", :target => "_blank"}
+        /       %i.fa.fa-linkedin
+        /   %li
+        /     %a{:href => "https://plus.google.com/", :target => "_blank"}
+        /       %i.fa.fa-google-plus
 
 
