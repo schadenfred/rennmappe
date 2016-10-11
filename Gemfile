@@ -43,6 +43,14 @@ gem 'haml-rails'
 
 gem 'backstretch-rails'
 
+gem 'redcarpet'
+
+gem 'seedbank'
+
+gem 'faker'
+
+gem 'faker-stoked', github: 'schadenfred/faker-stoked'#, tag: 'v0.2.8'
+gem 'vinbot'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end

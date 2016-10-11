@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920231455) do
+ActiveRecord::Schema.define(version: 20161010180912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,19 @@ ActiveRecord::Schema.define(version: 20160920231455) do
     t.index ["slug"], name: "index_orgs_on_slug", using: :btree
   end
 
+  create_table "ownerships", force: :cascade do |t|
+    t.integer  "vehicle_id"
+    t.integer  "owner_id"
+    t.date     "ownership_begin"
+    t.date     "ownership_end"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["vehicle_id", "owner_id"], name: "index_ownerships_on_vehicle_id_and_owner_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.text     "bio"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -75,6 +87,7 @@ ActiveRecord::Schema.define(version: 20160920231455) do
     t.datetime "updated_at",                          null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["name"], name: "index_users_on_name", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
@@ -82,6 +95,7 @@ ActiveRecord::Schema.define(version: 20160920231455) do
     t.string   "vin"
     t.string   "make"
     t.string   "model"
+    t.integer  "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
