@@ -50,16 +50,17 @@ gem 'seedbank'
 gem 'faker'
 
 gem 'faker-stoked', github: 'schadenfred/faker-stoked'#, tag: 'v0.2.8'
-gem 'vinbot'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.1.0'
-end
 
 gem 'font-awesome-rails'
 gem 'ionicons-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'vinbot'
+  source 'https://rails-assets.org' do
+    gem 'rails-assets-tether', '>= 1.1.0'
+  end
+
   gem 'byebug', platform: :mri
 
   gem 'minitest-rails'
