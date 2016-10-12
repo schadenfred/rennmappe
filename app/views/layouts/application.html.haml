@@ -18,13 +18,12 @@
     / = render "head"
 
   %body
-    = render "preloader"
 
     .wrapper
+      / = render "preloader"
       / .container
       %header
-        = yield :header
-
+        = render "header"
       = yield
     = yield :javascripts
 

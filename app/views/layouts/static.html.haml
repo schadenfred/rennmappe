@@ -1,5 +1,21 @@
-- content_for :header do
-  = render "header"
+- content_for :nav_links do
+  .nav-menu.singlepage-nav
+    %ul.nav-menu-inner
+      %li
+        = link_to('home', "#intro")
+      - if user_signed_in?
+        %li
+          = link_to('sign out', destroy_user_session_path)
+      - else
+        %li
+          = link_to('sign in', "#sign-in-form")
+
+      - if user_signed_in?
+        %li
+          = link_to('settings', edit_user_registration_path)
+      - else
+        %li
+
 - content_for :stylesheets do
   = stylesheet_link_tag "application"
 - content_for :javascripts do

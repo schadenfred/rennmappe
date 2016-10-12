@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'dashboard/show'
+
   get '/about',           to: "static#about"
   get '/contact',         to: "static#contact"
   get '/help',            to: "static#help"
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   get '/terms',           to: "static#terms"
   get '/sweet_thanks',    to: "static#sweet_thanks"
   get 'static/sample'
+  get 'dashboard',        to: "dashboard#show"
 
   resources :orgs
   resources :vehicles
@@ -18,6 +21,8 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, controllers: { confirmations: 'confirmations' }
+
+  get '/dashboard' => 'dashboard#show', as: :user_root # creates user_root_path
 
 
   mount Galleriable::Engine => "/galleriable"
