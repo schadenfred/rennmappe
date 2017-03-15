@@ -9,10 +9,10 @@
 
 /*
 * BASIC
-  - General Style
-  - Typography Style
+  - General Style    
+  - Typography Style    
   - Button Style
-  - Form Style
+  - Form Style    
   - Spacer Style
 
 * HEADER
@@ -42,7 +42,7 @@
   - Client Logo
   - Contact Form, Map, contact-info
   - Preloader
-
+ 
 * Footer
   - Footer Logo
   - Copyright
@@ -558,7 +558,7 @@ button, input, textarea, select {
     font-size: 12px;
 }
 
-    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="radio"], textarea, select {
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="radio"], input[type="checkbox"], textarea, select {
         appearance: none;
         -webkit-appearance: none;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1912,7 +1912,7 @@ form label.error {
     height:100%;
 }
 .intro-caption-waper {
-
+    
     height:100%;
     position:absolute;
     width:100%;
@@ -1971,14 +1971,14 @@ form label.error {
 }
 
 .sc-paragraph-lead {
-
+    
     font-family: Georgia;
     font-style: italic;
-
+    
     font-size: 20px;
     text-align:center;
-
-
+    
+    
     /*margin-top: 0px;
     margin-bottom:0;*/
 }
@@ -2200,7 +2200,7 @@ o-flow-hidden {
     .intro-text-slider .owl-controls .owl-buttons .owl-next,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
-
+        
         color: #fff;
         /*text-align: center;*/
         position: absolute;
@@ -2233,7 +2233,7 @@ o-flow-hidden {
         width:120%;
         position:absolute;
         top:0;
-
+        
     }
         .content-carousel .owl-controls .owl-buttons .owl-prev:before,
         .image-carousel .owl-controls .owl-buttons .owl-prev:before,
@@ -2243,7 +2243,7 @@ o-flow-hidden {
             left:0;
             margin-left:-60%;
         }
-
+        
         .content-carousel .owl-controls .owl-buttons .owl-next:before,
         .image-carousel .owl-controls .owl-buttons .owl-next:before,
         .intro-text-slider .owl-controls .owl-buttons .owl-next:before,
