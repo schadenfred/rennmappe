@@ -9,10 +9,10 @@
 
 /*
 * BASIC
-  - General Style    
-  - Typography Style    
+  - General Style
+  - Typography Style
   - Button Style
-  - Form Style    
+  - Form Style
   - Spacer Style
 
 * HEADER
@@ -42,7 +42,7 @@
   - Client Logo
   - Contact Form, Map, contact-info
   - Preloader
- 
+
 * Footer
   - Footer Logo
   - Copyright
@@ -443,7 +443,7 @@ a {
 }
 
     .Link:hover {
-        color: #c7a674;
+        /*color: #c7a674;*/
     }
 
 .link-d {
@@ -451,7 +451,7 @@ a {
 }
 
     .link-d:hover {
-        color: #c7a674;
+        /*color: #c7a674;*/
     }
 
 
@@ -1912,7 +1912,7 @@ form label.error {
     height:100%;
 }
 .intro-caption-waper {
-    
+
     height:100%;
     position:absolute;
     width:100%;
@@ -1971,14 +1971,14 @@ form label.error {
 }
 
 .sc-paragraph-lead {
-    
+
     font-family: Georgia;
     font-style: italic;
-    
+
     font-size: 20px;
     text-align:center;
-    
-    
+
+
     /*margin-top: 0px;
     margin-bottom:0;*/
 }
@@ -2200,7 +2200,7 @@ o-flow-hidden {
     .intro-text-slider .owl-controls .owl-buttons .owl-next,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
-        
+
         color: #fff;
         /*text-align: center;*/
         position: absolute;
@@ -2233,7 +2233,7 @@ o-flow-hidden {
         width:120%;
         position:absolute;
         top:0;
-        
+
     }
         .content-carousel .owl-controls .owl-buttons .owl-prev:before,
         .image-carousel .owl-controls .owl-buttons .owl-prev:before,
@@ -2243,7 +2243,7 @@ o-flow-hidden {
             left:0;
             margin-left:-60%;
         }
-        
+
         .content-carousel .owl-controls .owl-buttons .owl-next:before,
         .image-carousel .owl-controls .owl-buttons .owl-next:before,
         .intro-text-slider .owl-controls .owl-buttons .owl-next:before,
