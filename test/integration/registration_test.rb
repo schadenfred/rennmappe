@@ -3,63 +3,23 @@ require "test_helper"
 feature "Authentication Feature Test" do
 
   scenario "Sign up from nav modal" do
-    visit "/"
-    within "#sign-up-form" do
-      fill_in 'user_email', with: 'test@test.com'
-    end
-    find_button('Sign up').click
-    User.where(email: "test@test.com").wont_be_nil
-    open_email('test@test.com')
-    current_email.click_link "Confirm my account"
+    visit root_path
+    click_link "Sign up"
+    current_path.must_equal new_user_registration_path
+    fill_in 'user_email', with: 'test_user@gmail.com'
     fill_in 'user_password', with: 'password'
     fill_in 'user_password_confirmation', with: 'password'
-    click_button 'Activate'
+    assert_difference('ActionMailer::Base.deliveries.count') do
+      click_button 'Sign up'
+    end
+    page.must_have_selector("#flash_notice", text: /confirmation link has been sent/)
+    open_email 'test_user@gmail.com'
+    current_email.subject.must_equal "Please confirm your account"
+    current_email.from.first.must_equal "gunther@rennmappe.de"
+    current_email.click_link "Confirm my account"
+    page.must_have_selector("#flash_notice", text: /successfully confirmed/)
+    current_path.must_equal new_user_session_path
+    User.last.email.must_equal "test_user@gmail.com"
   end
 end
 
-# #   scenario "Sign up with facebook" do
-# #     skip
-# #     OmniAuth.config.test_mode = true
-# #     OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
-# #       provider: 'facebook',
-# #       uid: '123545',
-# #       info: {
-# #         nickname: "fredtasticvoyager",
-# #         email: "fred.schoeneman@gmail.com",
-# #         first_name: "Fred",
-# #         last_name: "Schoeneman",
-# #         name: "Fred Schoeneman",
-# #         urls: {
-# #           Facebook: "https://www.facebook.com/fredtasticvoyager"
-# #         },
-# #         location: "Oakland, California"
-# #       }
-# #     })
-# #     # request.env["devise.mapping"] = Devise.mappings[:user]
-# #     # request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:facebook]
-
-# #     visit user_omniauth_authorize_path(:facebook)
-
-# #     page.must have_selector(".alert-box", text: /Signed in with Facebook/)
-# #   end
-
-# #   scenario "sign up with twitter" do
-
-# #   end
-
-# #   scenario "sign up with linkedin" do
-
-# #   end
-
-# #   scenario "sign up with instagram" do
-
-# #   end
-
-# #   scenario "sign up with pinterest" do
-
-# #   end
-
-# #   scenario "confirm account" do
-
-# #   end
-# # end

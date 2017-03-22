@@ -9,6 +9,7 @@ require 'database_cleaner'
 require 'minitest/given'
 require 'minitest/nyan_cat'
 require 'tilt/redcarpet'
+require 'capybara/email'
 
 
 
@@ -28,5 +29,8 @@ end
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
   include Capybara::Assertions
+  include Devise::Test::IntegrationHelpers
 end
 
+class ActionDispatch::IntegrationTest
+end

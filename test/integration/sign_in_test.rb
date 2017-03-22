@@ -2,21 +2,21 @@ require "test_helper"
 
 feature "Authentication Feature Test" do
 
-  let(:user) { create( :user, password: "password" ) }
+  before do
+    @user = FactoryGirl.create(:user)
+  end
 
-
-  scenario "Sign in" do
+  scenario "Sign in and sign out" do
     visit root_url
-    page.has_link?("Sign in")
-    within '#sign-in-form' do
-      fill_in 'user_email', with: user.email
-      fill_in 'user_password', with: user.password
-      find_button("sign in").click
-    end
-    page.has_current_path?(dashboard_path)
+    click_link "Sign in"
+    current_path.must_equal new_user_session_path
+    fill_in "user_email", with: @user.email
+    fill_in "user_password", with: @user.password
+    click_button 'Log in'
+    current_path.must_equal dashboard_path
+    page.must_have_selector("#flash_notice", text: /Signed in/)
     click_link "sign out"
-    page.has_current_path?("/")
-    save_and_open_page
-    page.assert_selector(".alert", text: /Signed out successfully./)
+    page.must_have_selector("#flash_notice", text: /Signed out/)
+    current_path.must_equal root_path
   end
 end

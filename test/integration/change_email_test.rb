@@ -3,22 +3,22 @@ require "test_helper"
 feature "Change email Feature Test" do
 
   before do
-    @user = FactoryGirl.create(:user, email: "jim.bobby@gmail.com", name: "Jimbob McBobsalot")
+    @user = FactoryGirl.create(:user, email: "jim.bobby@aol.com", name: "Jimbob McBobsalot")
     login_as(@user)
     visit dashboard_path
   end
 
   scenario "from dashboard settings" do
-
-    within("#settings") do
-      fill_in "Email", with: "James.Robert@gmail.com"
-      fill_in "Current password", with: @user.password
+    click_link "settings"
+    fill_in "Email", with: "jim.bobby@gmail.com"
+    fill_in "Current password", with: @user.password
+    assert_difference('ActionMailer::Base.deliveries.count') do
       click_button "Update"
     end
-    open_email("james.robert@gmail.com").click_link "Confirm my account"
-    fill_in "Email", with: "James.Robert@gmail.com"
-    fill_in "Password", with: @user.password
-    click_button "Sign in"
-    page.assert_selector(".alert", text: /Signed in successfully/)
+    page.assert_selector("#flash_notice", text: /need to verify your new/)
+    open_email "jim.bobby@gmail.com"
+    current_email.subject.must_equal "Please confirm your account"
+    current_email.from.first.must_equal "gunther@rennmappe.de"
+    current_email.click_link "Confirm my account"
   end
 end

@@ -35,6 +35,8 @@ describe User do
   specify "associations" do
 
     must_have_many(:ownerships)
+    must_have_many(:orgs)
+    must_have_many(:orgs_users)
     must_have_many(:vehicles)
   end
 

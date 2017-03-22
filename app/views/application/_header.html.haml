@@ -1,29 +1,28 @@
-#header.header
-  .header-inner
-    .logo
-      = link_to root_url do
+%header
+  #header.header
+    .header-inner
+      .logo
+        = link_to root_url do
 
-        %img{:src => asset_path("logo-rennmappe-white.png")}/
-    .nav-menu-icon
-      %a
-        %i.fa.fa-bars
-    .nav-menu
-      %ul.nav-menu-inner
-        %li
-          = link_to "dashboard", dashboard_path
-        %li
-          = link_to('home', root_url)
-        - if user_signed_in?
+          %img{:src => asset_path("logo-rennmappe-white.png")}/
+      .nav-menu-icon
+        %a
+          %i.fa.fa-bars
+      .nav-menu
+        %ul.nav-menu-inner
+          - if user_signed_in?
+            %li
+              = link_to "dashboard", dashboard_path
+            %li
+              = link_to('settings', edit_user_registration_path)
+            %li
+              = link_to('sign out', destroy_user_session_path)
+      .nav-menu
+        %ul.nav-menu-inner
           %li
-            = link_to('settings', edit_user_registration_path)
-          %li
-            = link_to('sign out', destroy_user_session_path)
-    .nav-menu.singlepage-nav
-      %ul.nav-menu-inner
-        %li
-        - if !user_signed_in?
-          %li
-            = link_to('sign in', "#sign-in-form")
-          %li
-            = link_to('sign up', "#sign-up-form")
+          - if !user_signed_in?
+            %li
+              = link_to('sign in', new_user_session_path)
+            %li
+              = link_to('sign up', new_user_registration_path)
 

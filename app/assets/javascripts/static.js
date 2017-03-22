@@ -33,7 +33,6 @@
 //= require theme
 
 //= require tether
-//= require bootstrap-sprockets
 //= require turbolinks
 //= require home
 

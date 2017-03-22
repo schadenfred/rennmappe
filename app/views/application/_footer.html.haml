@@ -1,0 +1,12 @@
+.container.text-center
+  %h5.features-title Kontakt
+  .footer-logo.mb-25.wow.fadeInUp{"data-wow-duration" => "1.5s"}
+    %a.scroll-top{:href => "#intro"}
+      %img{:alt => "RennMappe.de", :src => asset_path("logo-rennmappe-large.png")}/
+  %p.contact-link
+    %span.text-bold Email :
+    = mail_to "fred.schoeneman@gmail.com", "einladungen@rennmappe.de"
+    %br/
+    %a
+      %span.text-bold Anruf :
+      +1 (510) 207 3450

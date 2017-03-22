@@ -2,26 +2,28 @@ require "test_helper"
 
 feature "Change email Feature Test" do
 
-  before do
+  background do
     @user = FactoryGirl.create(:user, email: "jim.bobby@gmail.com", name: "Jimbob McBobsalot")
     login_as(@user)
     visit dashboard_path
+    current_path.must_equal dashboard_path
+    click_link "settings"
+    current_path.must_equal "/users/edit"
+    fill_in "Password", with: "newpass"
+    fill_in "Password confirmation", with: "newpass"
   end
 
-  scenario "from dashboard settings" do
+  scenario "without current password" do
+    fill_in "Current password", with: "wrongpass"
+    click_button "Update"
+    page.must_have_selector(".alert", text: /Please review the problems below/)
+    current_path.must_equal "/users"
+  end
 
-    within("#settings") do
-      fill_in "Password", with: "complicatedpass"
-      fill_in "Password confirmation", with: "complicatedpass"
-
-      fill_in "Current password", with: @user.password
-      click_button "Update"
-    end
-    click_link "sign out #{@user.email}"
-    click_link "Sign in"
-    fill_in "Email", with: @user.email
-    fill_in "Password", with: "complicatedpass"
-    click_button "Sign in"
-    page.assert_selector(".alert", text: /Signed in successfully./)
+  scenario "with current password" do
+    fill_in "Current password", with: @user.password
+    click_button "Update"
+    page.assert_selector("#flash_notice", text: /updated successfully./)
+    current_path.must_equal "/dashboard"
   end
 end

@@ -559,9 +559,9 @@ button, input, textarea, select {
 }
 
     input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="radio"], input[type="checkbox"], textarea, select {
-        appearance: none;
+/*        appearance: none;
         -webkit-appearance: none;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+*/        border: 1px solid rgba(0, 0, 0, 0.1);
         background: #fff;
         -webkit-border-radius: 0px !important;
         -moz-border-radius: 0px !important;
