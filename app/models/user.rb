@@ -12,5 +12,26 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :ownerships
 
+  def temporary_name
+    localpart = email.split('@').first.split(/\.|\d|\_/)
+    localpart.size > 1 ? localpart.map(&:capitalize).join(" ").gsub(/\s+/, ' ') : "Driver"
+  end
 
+  def temporary_given_name
+    temporary_name.split(/\s/).first.capitalize
+  end
+
+  def reconciled_name
+    if name.nil? && given_name.nil?
+      temporary_name
+    elsif  name.nil? && given_name
+      given_name
+    else
+      name
+    end
+  end
+
+  def reconciled_given_name
+    given_name.nil? ? reconciled_name.split(" ").first : given_name
+  end
 end
