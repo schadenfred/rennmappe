@@ -1,6 +1,7 @@
 %header#header.header
   .container
     .header-inner
+      = render "messages"
       .logo
         = link_to root_url do
           %img{:src => asset_path("logo-rennmappe-white.png")}/
