@@ -1,27 +1,902 @@
-/ %section#intro.intro-fullscreen
-/   / Static Hero
-/   .intro-media.overlay-dark20
-/   .intro-caption-waper.dark-bg
-/     .intro-full-height.container
-/       .intro-content
-/         .intro-content-inner
-/           .intro-img-circle
-/             %img{:alt => "avatar01", :src => "img/avatar01.jpg"}/
-/           %h1.intro-title.mb-10
-/             %span.text-light Hi!, I am
-/             John Doe
-/           %h6.page-title-alt.mb-45 Web Designer  Developer
-/           %a.btn.btn-lg.btn-white.scroll-down{:href => "#Statement1"} Go My Resume
-/   / End Static Hero
-
-%section#intro
-  / Hero Slider Section
-  .flexslider.fullscreen-carousel.hero-slider-1
-    %ul.slides
-      = render "static/home/slide_1"
-      = render "static/home/slide_2"
-      = render "static/home/slide_3"
-      = render "static/home/slide_4"
-  / End Hero Slider Section
-.clearfix
-/ End Intro Section
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Mazel - Multiprapose Html template
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "nileforest", :name => "author"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    /[if IE] <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    / Favicone Icon
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "img/favicon.png", :rel => "icon", :type => "image/png"}/
+    %link{:href => "img/favicon.png", :rel => "apple-touch-icon"}/
+    / CSS
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/ionicons.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/sidebar-menu.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    / Site Wraper
+    .wrapper
+      / HEADER
+      %header#header.header
+        .container
+          / Logo
+          .logo
+            %a{:href => "index.html"}
+              %img.logo-light{:alt => "Mazel", :src => "img/logo-white.png"}/
+              %img.logo-dark{:alt => "Mazel", :src => "img/logo-black.png"}/
+          / End Logo
+          / Navbar Navigation
+          .nav-menu.singlepage-nav
+            %ul.nav-menu-inner
+              %li
+                %a{:href => "#intro"} Home
+              %li
+                %a{:href => "#about"} About
+              %li
+                %a{:href => "#work"} Work
+              %li
+                %a{:href => "#service"} Service
+              %li
+                %a{:href => "#blog"} News
+              %li
+                %a{:href => "#pricing"} Pricing
+              %li
+                %a{:href => "#contact-section"} Contact
+          / End Navbar Navigation
+      / END HEADER
+      / CONTENT -------------------------------------------------------------------------------
+      / Intro Section
+      %section#intro.dark-bg
+        / Hero Slider Section
+        .owl-carousel.fullwidth-slider.white.o-flow-hidden
+          / Slide
+          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/22.jpg"}
+            / Content
+            .full-cap-wraper.overlay-dark80.light-color
+              .content-caption.light-color
+                .container
+                  %h5 The Digitel Agency
+                  %br/
+                  %h1.h1 Welcome To Mazel
+                  %br/
+                  %div
+                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
+                    %span.btn-space-10.xs-hidden
+                    %a.btn.btn-md.btn-white Learn More
+            / End Content
+          / Slide
+          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/16.jpg"}
+            / Content
+            .full-cap-wraper.overlay-dark80.light-color
+              .content-caption.light-color
+                .container
+                  %h5 The Creative Agency
+                  %br/
+                  %h1.h1 Mazel Creative Agency
+                  %br/
+                  %div
+                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
+                    %span.btn-space-10.xs-hidden
+                    %a.btn.btn-md.btn-white Learn More
+            / End Content
+          / Slide
+          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/23.jpg"}
+            / Content
+            .full-cap-wraper.overlay-dark80.light-color
+              .content-caption.light-color
+                .container
+                  %h5 The Digitel Studio
+                  %br/
+                  %h1.h1 One &amp; Mutlipage Theme
+                  %br/
+                  %div
+                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
+                    %span.btn-space-10.xs-hidden
+                    %a.btn.btn-md.btn-white Learn More
+            / End Content
+        / End Hero Slider Section
+      / End Intro Section
+      .clearfix
+      / About Section
+      %section#about.wow.fadeIn.ptb.ptb-sm-80
+        .container
+          .row.text-center
+            .col-md-8.col-md-offset-2
+              %h3.h4 About Studio
+              .spacer-15
+              %p.lead
+                Integer tincidunt Cras dapibus.
+                %a.tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Sample Text"}
+                  %b Vivamus elementum
+                ultricies nisi vel augue. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante dapibus.
+          .row.mt-80
+            .col-md-4.mb-30
+              %img{:alt => "", :src => "img/about1.jpg"}/
+            .col-md-4.mb-30
+              %h4 WE`RE CREATIVE.
+              .spacer-15
+              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+              %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?
+            / Skills
+            .col-md-4
+              .skillbar{"data-percent" => "55%"}
+                .skillbar-title Web design
+                .skill-bar-percent 55%
+                .skillbar-bar
+              .skillbar{"data-percent" => "80%"}
+                .skillbar-title development
+                .skill-bar-percent 80%
+                .skillbar-bar
+              .skillbar{"data-percent" => "40%"}
+                .skillbar-title Photography
+                .skill-bar-percent 40%
+                .skillbar-bar
+              .skillbar{"data-percent" => "70%"}
+                .skillbar-title branding
+                .skill-bar-percent 70%
+                .skillbar-bar
+            / End Skills
+      / End About Section
+      %hr/
+      / Team
+      %section.ptb.ptb-sm-80
+        .container.text-center
+          %h3 Meet The Team
+          .spacer-60
+          / Team Carousel
+          .row
+            .owl-carousel.team-carousel.nf-carousel-theme
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-1.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Mitchell KAPPOS
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Mitchell KAPPOS
+                    %p Designer
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-2.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Leonardo da Vinci
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Leonardo da Vinci
+                    %p Artist
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-3.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 John Doe
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 John Doe
+                    %p Project Manager
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-4.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Michael Lee
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Michael Lee
+                    %p Photographer
+          / End Team Carousel -
+      / End Team
+      / Action Box Section
+      %section#action-box.dark-bg.ptb-60
+        .container
+          .row
+            .col-md-8.col-sm-8
+              %h4 Donec sodales sagittis magna bibendum sodales Sed consequat?
+            .col-md-4.col-sm-4
+              %a.btn.btn-md.btn-white.float-right.float-none-xs Download
+      / End Action Box Section
+      / Work Section
+      %section#work.wow.fadeInUp.ptb.ptb-sm-80.text-center
+        .container
+          %h3 Our Work
+          .spacer-60
+          / work Filter
+          .row
+            %ul.container-filter.categories-filter.mb-0
+              %li
+                %a.categories.active{"data-filter" => "*"} All
+              %li
+                %a.categories{"data-filter" => ".branding"} Branding
+              %li
+                %a.categories{"data-filter" => ".design"} Design
+              %li
+                %a.categories{"data-filter" => ".photo"} Photo
+              %li
+                %a.categories{"data-filter" => ".coffee"} coffee
+          / End work Filter
+        / Work Gallary
+        .container
+          .row.container-grid.nf-col-3
+            .nf-item.branding.design.coffee.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/1.jpg", :title => "Consequat massa quis"}
+                  %img.item-container{:alt => "1", :src => "img/portfolio/1.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Consequat massa quis
+                      %p.white Branding, Design, Coffee
+            .nf-item.photo.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/2.jpg", :title => "Vivamus elementum semper"}
+                  %img.item-container{:alt => "2", :src => "img/portfolio/2.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Vivamus elementum semper
+                      %p.white Photo
+            .nf-item.branding.design.coffee.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/3.jpg", :title => "Quisque rutrum"}
+                  %img.item-container{:alt => "4", :src => "img/portfolio/3.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Quisque rutrum
+                      %p.white Branding, Design, Coffee
+            .nf-item.branding.design.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/4.jpg", :title => "Tellus eget condimentum"}
+                  %img.item-container{:alt => "4", :src => "img/portfolio/4.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Tellus eget condimentum
+                      %p.white Design
+            .nf-item.branding.design.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/5.jpg", :title => "Nullam quis ant"}
+                  %img.item-container{:alt => "5", :src => "img/portfolio/5.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Nullam quis ant
+                      %p.white Branding, Design
+            .nf-item.photo.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/6.jpg", :title => "Sed fringilla mauris"}
+                  %img.item-container{:alt => "6", :src => "img/portfolio/6.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Sed fringilla mauris
+                      %p.white Photo
+            .nf-item.design.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/7.jpg", :title => "Augue velit cursus"}
+                  %img.item-container{:alt => "7", :src => "img/portfolio/7.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Augue velit cursus
+                      %p.white Design
+            .nf-item.coffee.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/8.jpg", :title => "Donec sodales sagittis"}
+                  %img.item-container{:alt => "8", :src => "img/portfolio/8.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Donec sodales sagittis
+                      %p.white Coffee
+            .nf-item.photo.spacing
+              .item-box
+                %a.cbox-gallary1{:href => "img/portfolio/9.jpg", :title => "Donec sodales sagittis"}
+                  %img.item-container{:alt => "8", :src => "img/portfolio/9.jpg"}/
+                  .item-mask
+                    .item-caption
+                      %h5.white Donec sodales sagittis
+                      %p.white Coffee
+        / End Work Gallary
+        .spacer-30
+        .container
+          %a.btn.btn-md.btn-black-line{:href => "portfolio-grid-3col.html", :target => "_blank"} View All
+      / End Work Section
+      / Counter Section
+      %section#counter.overlay-dark80.light-color.ptb-80{"data-stellar-background-ratio" => "0.5", :style => "background-image: url('img/full/21.jpg');"}
+        .container.text-center
+          .row
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "59"} 0
+              %h6 awards
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "1054"} 0
+              %h6 Clients
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "34"} 0
+              %h6 Team
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "154"} 0
+              %h6 Project
+      / End Counter Section
+      / Service Section
+      %section#service.ptb.ptb-sm-80
+        .wow.fadeInLeft.container.text-center
+          %h3 Our Services
+          .spacer-60
+          .row
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-ios-compose-outline
+              %h5 Web Design
+              %p Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem.
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-ios-gear-outline
+              %h5 Development
+              %p Donec sodales sagittis magna. hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus, augue velit cursus nunc.
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-social-apple-outline
+              %h5 Branding
+              %p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-ios-compose-outline
+              %h5 Photography
+              %p Excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-ios-gear-outline
+              %h5 Typography
+              %p Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.
+            .col-md-4.col-sm-6.mb-45
+              .page-icon-top
+                %i.ion.ion-social-apple-outline
+              %h5 Ui Design
+              %p Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.
+      / End Service Section
+      %hr/
+      / Contant Slider Section
+      %section#contant.wow.fadeIn.ptb.ptb-sm-80
+        .owl-carousel.content-carousel.content-slider
+          .item
+            .container
+              .row
+                .col-md-6.mb-sm-30
+                  %img{:alt => "", :src => "img/moc-1.png"}/
+                .col-md-5.col-md-offset-1
+                  %h3 Flexible &amp; Customizable
+                  .spacer-15
+                  %p Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.
+                  %p porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet
+                  .spacer-15
+                  %a.btn.btn-md.btn-black Buy this Theme
+          .item
+            .container
+              .row
+                .col-md-5.mb-sm-30
+                  %h3 Multipages &amp; Onepage
+                  .spacer-15
+                  %p Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.
+                  %p porttitor eu consequat vitae Phasellus viverra nulla.
+                  .spacer-15
+                  %a.btn.btn-md.btn-black Download Theme
+                .col-md-6.col-md-offset-1
+                  %img{:alt => "", :src => "img/moc-1.png"}/
+          .item
+            .container
+              .row
+                .col-md-6.mb-sm-30
+                  %img{:alt => "", :src => "img/moc-2.png"}/
+                .col-md-5.col-md-offset-1
+                  %h3 Fully Responsive
+                  .spacer-15
+                  %p Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.
+                  %p porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet
+                  .spacer-15
+                  %a.btn.btn-md.btn-black Buy this Theme
+      / End Contain Slider Section
+      / Testimonials
+      %section#testimonial.overlay-dark80.dark-bg.ptb.ptb-sm-80{"data-stellar-background-ratio" => "0.5", :style => "background-image: url('img/full/22.jpg');"}
+        .container
+          .owl-carousel.testimonial-carousel.nf-carousel-theme.white
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising. I did my first show in the third grade and just kept going. "
+                %h6.quote-author
+                  Jeff Dunham
+                  %span{:style => "font-weight: 400;"} ( Appel Studio )
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " It's true, you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist eating his dummy. "
+                %h6.quote-author
+                  Alexander Theroux
+                  %span{:style => "font-weight: 400;"} ( USA )
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " We're not leaving here without Buster, man. Leave no crash-test dummy behind! "
+                %h6.quote-author
+                  Adam Savage
+                  %span{:style => "font-weight: 400;"} ( Artist )
+      / End Testimonials
+      / Features
+      %section#features.ptb.ptb-sm-80
+        .container.text-center
+          %h3.mt-sm Key Features
+          %p.lead Fully Responsive &amp; Mobile Ready
+          .spacer-60
+          .row
+            .wow.fadeInLeft.col-md-4.pt-80.pt-sm-0
+              .features-box-right
+                .features-icon-right
+                  %i.ion.ion-ios-monitor-outline
+                %h5 bootstrap 3
+                %p Consectetuer Adipiscing elit Aenean commodo Ligula dolor.
+              .features-box-right
+                .features-icon-right
+                  %i.ion.ion-ios-videocam-outline
+                %h5 html 5 video
+                %p Nullam dictum felis eu pede mollis pretium leo eget bibendum sodales augue velit cursus.
+              .features-box-right
+                .features-icon-right
+                  %i.ion.ion-ios-barcode-outline
+                %h5 Clean code &amp; design
+                %p tellus eget condimentum rhoncus sem quam semper libero.
+              .features-box-right
+                .features-icon-right
+                  %i.ion.ion-ios-albums-outline
+                %h5 Unlimited layouts
+                %p Donec sodales sagittis magna. Sed consequat.
+            .wow.fadeIn.col-md-4.hidden-sm.hidden-xs.text-center
+              %img{:src => "img/moc-3.png"}/
+            .wow.fadeInRight.col-md-4.pt-80.pt-sm-0
+              .features-box-left
+                .features-icon-left
+                  %i.ion.ion-ios-compose-outline
+                %h5 Flexible &amp; Customizable
+                %p Donec vitae sapien ut libero venenatis faucibus.
+              .features-box-left
+                .features-icon-left
+                  %i.ion.ion-ios-eye-outline
+                %h5 Multi Concept &amp; Mutli prapose Theme
+                %p Quisque rutrum. Aenean imperdiet Etiam ultricies nisi.
+              .features-box-left
+                .features-icon-left
+                  %i.ion.ion-ios-paper-outline
+                %h5 Well Documented
+                %p Aenean vulputate eleifend tellus Aenean leo ligula porttitor.
+              .features-box-left
+                .features-icon-left
+                  %i.ion.ion-ios-chatbubble-outline
+                %h5 Friendly Support
+                %p Phasellus viverra nulla ut metus laoreet Quisque rutrum.
+      / End Features
+      %hr/
+      / Blog Section
+      %section#blog.wow.fadeIn.ptb.ptb-sm-80
+        .container
+          %h3.float-left.float-none-xs Latest Blog
+          %a.btn-link-a.float-right.float-none-xs View All
+          .clearfix
+          .spacer-60
+          .row
+            .col-lg-4.col-md-6.col-sm-6.mb-sm-30
+              .blog-post
+                .post-media
+                  %video.video{:controls => "controls", :height => "", :poster => "media/echo-hereweare.jpg", :preload => "auto", :style => "width: 100%;", :width => ""}
+                    / MP4 source must come first for iOS
+                    %source{:src => "media/video1.mp4", :type => "video/mp4"}
+                    / WebM for Firefox 4 and Opera
+                    %source{:src => "media/video1.webm", :type => "video/webm"}
+                    / OGG for Firefox 3
+                    %source{:src => "media/video1.ogv", :type => "video/ogg"}
+                .post-meta
+                  %span
+                    by
+                    = succeed "," do
+                      %a John Doe
+                  %span Mar 16, 2015
+                .post-header
+                  %h5
+                    %a{:href => ""} Maecenas nec odio ante varcy
+            .col-lg-4.col-md-6.col-sm-6.mb-sm-30
+              .blog-post
+                .post-media
+                  .owl-carousel.item1-carousel.nf-carousel-theme
+                    .item
+                      %img{:alt => "", :src => "img/full/26.jpg"}/
+                    .item
+                      %img{:alt => "", :src => "img/full/04.jpg"}/
+                    .item
+                      %img{:alt => "", :src => "img/full/27.jpg"}/
+                .post-meta
+                  %span
+                    by
+                    = succeed "," do
+                      %a John Doe
+                  %span Feb 24, 2015
+                .post-header
+                  %h5
+                    %a{:href => ""} onec pede justo, fringilla vel
+            .col-lg-4.col-md-6.col-sm-6.mb-sm-30
+              .blog-post
+                .post-media
+                  %img.item-container{:alt => "", :src => "img/full/20.jpg"}/
+                .post-meta
+                  %span
+                    by
+                    = succeed "," do
+                      %a John Doe
+                  %span Jan 29, 2015
+                .post-header
+                  %h5
+                    %a{:href => ""} Augue velit cursus nunc
+      / End Blog Section
+      / Statement Section
+      %section#statement.bg-img19.overlay-dark80.dark-bg.ptb.ptb-sm-80
+        .container.text-center
+          .row
+            .col-md-8.col-md-offset-2
+              %a.cbox-iframe{:href => "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"}
+                .page-icon-top
+                  %i.ion.ion-ios-film-outline
+              %h4 Pellentesque eu pretium quis adipiscing sem neque sem Nulla consequat massa quis enim?
+              .spacer-15
+              %a.cbox-iframe.btn.btn-md.btn-white{:href => "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"} Watch Video
+      / End Statement Section
+      / Pricing Section
+      %section#pricing.ptb.ptb-sm-80
+        .container.text-center
+          %h3 Pricing
+          .spacer-60
+          .row
+            .col-md-4.mtb-xs-30
+              .Pricing-box
+                .price-title.spacing-box
+                  %h4 Regular
+                %hr/
+                .spacing-box
+                  .price
+                    %span.price-sm $
+                    %span.price-lg 49
+                  .price-tenure per month
+                %hr/
+                .pricing-features.spacing-grid
+                  %ul
+                    %li Full Access
+                    %li
+                      1 Domain
+                      %strong Free
+                    %li Source Files
+                    %li
+                      %strong 50 User Accounts
+                    %li 6 Month License
+                    %li Premium Support
+                %hr/
+                .spacing-grid
+                  %a.btn.btn-md.btn-black Sign Up Today
+            .col-md-4.mtb-xs-30
+              .Pricing-box.highlight
+                .price-title.spacing-box
+                  %h4 Standard
+                %hr/
+                .spacing-box
+                  .price
+                    %span.price-sm $
+                    %span.price-lg 79
+                  .price-tenure per month
+                %hr/
+                .pricing-features.spacing-grid
+                  %ul
+                    %li Full Access
+                    %li
+                      1 Domain
+                      %strong Free
+                    %li Source Files
+                    %li
+                      %strong 500 User Accounts
+                    %li 6 Month License
+                    %li Premium Support
+                %hr/
+                .spacing-grid
+                  %a.btn.btn-md.btn-black Sign Up Today
+            .col-md-4
+              .Pricing-box
+                .price-title.spacing-box
+                  %h4 Advanced
+                %hr/
+                .spacing-box
+                  .price
+                    %span.price-sm $
+                    %span.price-lg 109
+                  .price-tenure per month
+                %hr/
+                .pricing-features.spacing-grid
+                  %ul
+                    %li Full Access
+                    %li
+                      1 Domain
+                      %strong Free
+                    %li Source Files
+                    %li
+                      %strong 5000 User Accounts
+                    %li 6 Month License
+                    %li Free Support
+                %hr/
+                .spacing-grid
+                  %a.btn.btn-md.btn-black Sign Up Today
+      / End Pricing Section
+      %hr/
+      / Client Logos Section
+      %section#client-logos.wow.fadeIn.ptb.ptb-sm-80
+        .container.text-center
+          %h3 Recent Clients
+        .spacer-60
+        .container
+          .owl-carousel.client-carousel.nf-carousel-theme
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/01.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/02.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/03.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/04.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/05.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/06.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/08.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/01.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/02.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/03.png"}/
+      / End Client Logos Section
+      / Social Section
+      %section#social.gray-bg.ptb.ptb-sm-80
+        .container.text-center
+          .row
+            .col-md-8.col-md-offset-2
+              %h3 Get Connect With Us
+          .spacer-60
+          .row
+            .col-md-8.col-md-offset-2
+              .row
+                .col-md-3.col-sm-4.col-xs-6
+                  .page-icon-top
+                    %i.ion.ion-social-twitter
+                  %h6
+                    %a.link{:href => "https://www.twitter.com/", :target => "_blank"} Twitter
+                .col-md-3.col-sm-4.col-xs-6
+                  .page-icon-top
+                    %i.ion.ion-social-facebook
+                  %h6
+                    %a.link{:href => "https://www.facebook.com/", :target => "_blank"} Facebook
+                .col-md-3.col-sm-4.col-xs-6
+                  .page-icon-top
+                    %i.ion.ion-social-googleplus
+                  %h6
+                    %a.link{:href => "https://plus.google.com/", :target => "_blank"} Google plus
+                .col-md-3.col-sm-4.col-xs-6
+                  .page-icon-top
+                    %i.fa.fa-linkedin
+                  %h6
+                    %a.link{:href => "https://www.linkedin.com/", :target => "_blank"} Linkedin
+      / End Social Section
+      / Contact Section
+      %section#contact-section.ptb.ptb-sm-80
+        .container
+          .row
+            .col-md-8.col-md-offset-2.text-center
+              %h3 Get In Touch
+          .spacer-75
+          .row
+            .col-md-6.col-md-offset-3
+              / Contact FORM
+              %form#contact.contact-form{:role => "form"}
+                / IF MAIL SENT SUCCESSFULLY
+                %h6.successContent
+                  %i.fa.fa-check.left{:style => "color: #5cb45d;"}>
+                  Your message has been sent successfully.
+                / END IF MAIL SENT SUCCESSFULLY
+                / MAIL SENDING UNSUCCESSFULL
+                %h6.errorContent
+                  %i.fa.fa-exclamation-circle.left{:style => "color: #e1534f;"}>
+                  There was a problem validating the form please check!
+                / END MAIL SENDING UNSUCCESSFULL
+                .form-field-wrapper
+                  %input#form-name.input-sm.form-full{:name => "form-name", :placeholder => "Your Name", :required => "", :type => "text"}/
+                .form-field-wrapper
+                  %input#form-email.input-sm.form-full{:name => "form-email", :placeholder => "Email", :required => "", :type => "email"}/
+                .form-field-wrapper
+                  %input#form-subject.input-sm.form-full{:name => "form-subject", :placeholder => "Subject", :type => "text"}/
+                .form-field-wrapper
+                  %textarea#form-message.form-full{:name => "form-message", :placeholder => "Your Message", :required => "", :rows => "7"}
+                %button#form-submit.btn.btn-md.btn-black.form-full{:name => "submit", :type => "submit"} Send Message
+              / END Contact FORM
+      / Contact Section
+      %hr/
+      %section#contact-info.ptb.ptb-sm-80
+        .container
+          .row
+            .col-md-4
+              .contact-box-left
+                .contact-icon-left
+                  %i.ion.ion-ios-location
+                %h6 Address
+                %p
+                  502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.
+            .col-md-4
+              .contact-box-left
+                .contact-icon-left
+                  %i.ion.ion-ios-telephone
+                %h6 Call Us
+                %p
+                  %span +40 (0) 012 345 6789
+                  %br/
+            .col-md-4
+              .contact-box-left
+                .contact-icon-left
+                  %i.ion.ion-ios-email
+                %h6 Email
+                %p
+                  %a{:href => "mailto:yourname@domain.com"} yourname@domain.com
+      / Map Section
+      %section.map
+        #map
+      / Map Section
+      / END CONTENT --------------------------------------------------------------------------
+      / FOOTER
+      %footer.footer.pt-80
+        / Copyright Bar
+        %section.copyright.pb-60
+          .container
+            %p
+              © 2015
+              = succeed "." do
+                %a
+                  %b Mazel Template
+              %br/
+              Template  by
+              %a{:href => "http://nileforest.com/", :target => "_blank"}
+                %b nileforest
+        / End Copyright Bar
+      / END FOOTER
+      / Scroll Top
+      %a.scroll-top
+        %i.fa.fa-angle-double-up
+      / End Scroll Top
+    / Site Wraper End
+    / JS
+    %script{:src => "js/jquery-1.11.2.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.easing.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-ui.min.js", :type => "text/javascript"}
+    %script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.flexslider.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fitvids.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.viewportchecker.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.stellar.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/wow.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.colorbox-min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/owl.carousel.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/isotope.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/masonry.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/imagesloaded.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fs.tipper.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/mediaelement-and-player.min.js"}
+    %script{:src => "js/plugin/jquery.validate.min.js", :type => "text/javascript"}
+    %script{:src => "js/theme.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/sidebar-menu.js", :type => "text/javascript"}
+    %script{:src => "js/navigation.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.singlePageNav.js", :type => "text/javascript"}
+    %script{:src => "js/contact-form.js", :type => "text/javascript"}
+    %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
+    %script{:src => "js/map.js", :type => "text/javascript"}
+    :javascript
+      //  Onepage Nav Elements
+      $('.singlepage-nav').singlePageNav({
+          offset: 0,
+          filter: ':not(.external)',
+          updateHash: true,
+          currentClass: 'current',
+          easing: 'swing',
+          speed: 750,
+          beforeStart: function () {
+              if ($(window).width() < 991) {
+                  $('.singlepage-nav > ul').hide();
+              };
+          },
+          onComplete: function () {
+              console.log('done scrolling');
+          }
+      });

@@ -13,7 +13,7 @@ feature "Authentication Feature Test" do
       click_button 'Sign up'
     end
     User.last.email.must_equal "kiran.hill@gmail.com"
-    page.must_have_selector("#flash_notice", text: /confirmation link has been sent/)
+    page.must_have_selector("#flash_notice", text: /confirmation link has been sent to your email address, rennfahrer/)
     open_email 'kiran.hill@gmail.com'
     current_email.subject.must_equal "Please confirm your account"
     current_email.from.first.must_equal "gunther@rennmappe.de"

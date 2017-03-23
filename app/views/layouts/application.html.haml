@@ -4,16 +4,19 @@
     = render "head"
     = yield :stylesheets
   %body
-    / = render "preloader"
-    / .container
-    .container
-      = render "messages"
-    .container
-      .wrapper
+    .wrapper
+      = render "application/header"
+      / %header#header.header
 
-        = render "header"
-        / = content_for?(:header) ? yield(:header) : render "header"
       = yield
+
+      /   / .container
+      /   /   = render "messages"
+      /   / .container
+      /   /   .wrapper
+
+      /   = render "header"
+      /   / = content_for?(:header) ? yield(:header) : render "header"
       %footer#footer.footer.section-padding.gray-bg
         = render "footer"
     = yield :javascripts
