@@ -1,4 +1,6 @@
-%header#header.header
+%header.header
+
+
   .container
     .header-inner
       = render "messages"
@@ -16,13 +18,9 @@
             %li
               = link_to('settings', edit_user_registration_path)
             %li
-              = link_to('sign out', destroy_user_session_path)
-      .nav-menu
-        %ul.nav-menu-inner
-          %li
-          - if !user_signed_in?
+              = link_to("Not #{current_user.reconciled_name}? sign out", destroy_user_session_path)
+          - else
             %li
               = link_to('sign in', new_user_session_path)
             %li
               = link_to('sign up', new_user_registration_path)
-
