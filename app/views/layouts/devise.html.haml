@@ -2,21 +2,20 @@
 %html{:lang => "en"}
   %head
     = render "head"
-    = yield :stylesheets
+    = stylesheet_link_tag "application"
+
   %body
-
     .wrapper
-      = render "application/header"
+      = render "devise/header"
+      %section.section-padding
+        .container.mb-60
+          .spacer-30
 
-      = yield
-
-      /   / .container
-      /   / .container
-      /   /   .wrapper
-
-      /   = render "header"
-      /   / = content_for?(:header) ? yield(:header) : render "header"
-      %footer#footer.footer.section-padding.gray-bg
+          .row.justify-content-center
+            .col-6
+              .devise
+                = yield
+      %footer#footer.footer.section-padding
         = render "footer"
     = yield :javascripts
 

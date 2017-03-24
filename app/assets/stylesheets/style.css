@@ -74,9 +74,9 @@ body {
     padding: 0px;
 }
 
-    .page-padding #page-wraper .wrapper {
-        padding: 30px;
-    }
+.page-padding #page-wraper .wrapper {
+    padding: 30px;
+}
 
 .page-border {
     position: fixed;
@@ -118,17 +118,17 @@ body {
 }
 
 @media (max-width: 480px) {
-    .page-padding #page-wraper .wrapper {
-        padding: 15px;
-    }
+  .page-padding #page-wraper .wrapper {
+      padding: 15px;
+  }
 
-    .page-border.right, .page-border.left {
-        width: 15px;
-    }
+  .page-border.right, .page-border.left {
+      width: 15px;
+  }
 
-    .page-border.top, .page-border.bottom {
-        height: 15px;
-    }
+  .page-border.top, .page-border.bottom {
+      height: 15px;
+  }
 }
 
 
@@ -146,6 +146,10 @@ body {
 
 .white-bg {
     background-color: #FFF;
+}
+
+.white-bg ul {
+    color: #333;
 }
 
 .bg-cover-section, .small-bg-cover-section {
@@ -166,6 +170,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+  text-decoration: none;
 }
 
 .overlay-dark, .overlay-dark20, .overlay-dark60, .overlay-dark80, .overlay-dark90, .overlay-light, .overlay-light80 {
@@ -232,9 +242,9 @@ a {
     text-decoration: none;
 }
 
-    a:hover {
-        color: #c7a674;
-    }
+a:hover {
+    color: #c7a674;
+}
 
 i.left, .i-left {
     margin-right: 6px;
@@ -1812,33 +1822,35 @@ form label.error {
     display: block;
 }
 
-    .nav-menu.active {
-        display: block;
-    }
 
-    .nav-menu ul.nav-menu-inner {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+.nav-menu.active {
+    display: block;
+}
 
-        .nav-menu ul.nav-menu-inner li {
-            display: inline-block;
-            list-style: none;
-            text-align: center;
-        }
+.nav-menu ul.nav-menu-inner {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-            .nav-menu ul.nav-menu-inner li a {
-                display: block;
-                color: #fff;
-                font-size: 13px;
-                line-height: 1;
-                padding: 43px 12px;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-family: "Raleway",sans-serif;
-            }
+.nav-menu ul.nav-menu-inner li {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-menu ul.nav-menu-inner li a {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  padding: 43px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Raleway",sans-serif;
+}
+
 
 .nav-menu-icon {
     display: none;

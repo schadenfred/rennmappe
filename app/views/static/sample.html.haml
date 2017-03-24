@@ -22,89 +22,22 @@
     %link{:href => "css/plugin/animate.css", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "css/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}/
   %body
-    / Site Wraper
+
     .wrapper
-      / HEADER
+      / Header
       %header#header.header
-        .container
-          / Logo
+        .container.header-inner
           .logo
             %a{:href => "index.html"}
               %img.logo-light{:alt => "Mazel", :src => "img/logo-white.png"}/
               %img.logo-dark{:alt => "Mazel", :src => "img/logo-black.png"}/
-          / End Logo
-          / Navbar Navigation
-          .nav-menu.singlepage-nav
-            %ul.nav-menu-inner
-              %li
-                %a{:href => "#intro"} Home
-              %li
-                %a{:href => "#about"} About
-              %li
-                %a{:href => "#work"} Work
-              %li
-                %a{:href => "#service"} Service
-              %li
-                %a{:href => "#blog"} News
-              %li
-                %a{:href => "#pricing"} Pricing
-              %li
-                %a{:href => "#contact-section"} Contact
-          / End Navbar Navigation
-      / END HEADER
       / CONTENT -------------------------------------------------------------------------------
       / Intro Section
-      %section#intro.dark-bg
+      %section#intro
         / Hero Slider Section
-        .owl-carousel.fullwidth-slider.white.o-flow-hidden
-          / Slide
-          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/22.jpg"}
-            / Content
-            .full-cap-wraper.overlay-dark80.light-color
-              .content-caption.light-color
-                .container
-                  %h5 The Digitel Agency
-                  %br/
-                  %h1.h1 Welcome To Mazel
-                  %br/
-                  %div
-                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
-                    %span.btn-space-10.xs-hidden
-                    %a.btn.btn-md.btn-white Learn More
-            / End Content
-          / Slide
-          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/16.jpg"}
-            / Content
-            .full-cap-wraper.overlay-dark80.light-color
-              .content-caption.light-color
-                .container
-                  %h5 The Creative Agency
-                  %br/
-                  %h1.h1 Mazel Creative Agency
-                  %br/
-                  %div
-                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
-                    %span.btn-space-10.xs-hidden
-                    %a.btn.btn-md.btn-white Learn More
-            / End Content
-          / Slide
-          .item.bg-img.slide-bg-image.parallax.parallax-section1{"data-background-img" => "img/full/23.jpg"}
-            / Content
-            .full-cap-wraper.overlay-dark80.light-color
-              .content-caption.light-color
-                .container
-                  %h5 The Digitel Studio
-                  %br/
-                  %h1.h1 One &amp; Mutlipage Theme
-                  %br/
-                  %div
-                    %a.btn.btn-md.btn-white-line.xs-hidden Read More
-                    %span.btn-space-10.xs-hidden
-                    %a.btn.btn-md.btn-white Learn More
-            / End Content
-        / End Hero Slider Section
-      / End Intro Section
+
       .clearfix
+      / End Intro Section
       / About Section
       %section#about.wow.fadeIn.ptb.ptb-sm-80
         .container
@@ -118,15 +51,17 @@
                   %b Vivamus elementum
                 ultricies nisi vel augue. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante dapibus.
           .row.mt-80
-            .col-md-4.mb-30
-              %img{:alt => "", :src => "img/about1.jpg"}/
-            .col-md-4.mb-30
+            / Welcome Content
+            .col-md-7.mb-30
               %h4 WE`RE CREATIVE.
               .spacer-15
-              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               %p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?
+              .spacer-15
+              %a.btn-link-a More About
+            / End Welcome Content
             / Skills
-            .col-md-4
+            .col-md-5
               .skillbar{"data-percent" => "55%"}
                 .skillbar-title Web design
                 .skill-bar-percent 55%
@@ -146,249 +81,6 @@
             / End Skills
       / End About Section
       %hr/
-      / Team
-      %section.ptb.ptb-sm-80
-        .container.text-center
-          %h3 Meet The Team
-          .spacer-60
-          / Team Carousel
-          .row
-            .owl-carousel.team-carousel.nf-carousel-theme
-              .item
-                .team-item.nf-col-padding
-                  .team-item-img
-                    %img{:alt => "", :src => "img/team/people-1.jpg"}/
-                    .team-item-detail
-                      .team-item-detail-inner.light-color
-                        %h5 Mitchell KAPPOS
-                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
-                        %ul.social
-                          %li
-                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
-                              %i.fa.fa-facebook
-                          %li
-                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
-                              %i.fa.fa-twitter
-                          %li
-                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
-                              %i.fa.fa-dribbble
-                          %li
-                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
-                              %i.fa.fa-pinterest
-                          %li
-                            %a{:href => "https://www.behance.net/", :target => "_blank"}
-                              %i.fa.fa-behance
-                  .team-item-info
-                    %h5 Mitchell KAPPOS
-                    %p Designer
-              .item
-                .team-item.nf-col-padding
-                  .team-item-img
-                    %img{:alt => "", :src => "img/team/people-2.jpg"}/
-                    .team-item-detail
-                      .team-item-detail-inner.light-color
-                        %h5 Leonardo da Vinci
-                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
-                        %ul.social
-                          %li
-                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
-                              %i.fa.fa-facebook
-                          %li
-                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
-                              %i.fa.fa-twitter
-                          %li
-                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
-                              %i.fa.fa-dribbble
-                          %li
-                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
-                              %i.fa.fa-pinterest
-                          %li
-                            %a{:href => "https://www.behance.net/", :target => "_blank"}
-                              %i.fa.fa-behance
-                  .team-item-info
-                    %h5 Leonardo da Vinci
-                    %p Artist
-              .item
-                .team-item.nf-col-padding
-                  .team-item-img
-                    %img{:alt => "", :src => "img/team/people-3.jpg"}/
-                    .team-item-detail
-                      .team-item-detail-inner.light-color
-                        %h5 John Doe
-                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
-                        %ul.social
-                          %li
-                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
-                              %i.fa.fa-facebook
-                          %li
-                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
-                              %i.fa.fa-twitter
-                          %li
-                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
-                              %i.fa.fa-dribbble
-                          %li
-                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
-                              %i.fa.fa-pinterest
-                          %li
-                            %a{:href => "https://www.behance.net/", :target => "_blank"}
-                              %i.fa.fa-behance
-                  .team-item-info
-                    %h5 John Doe
-                    %p Project Manager
-              .item
-                .team-item.nf-col-padding
-                  .team-item-img
-                    %img{:alt => "", :src => "img/team/people-4.jpg"}/
-                    .team-item-detail
-                      .team-item-detail-inner.light-color
-                        %h5 Michael Lee
-                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
-                        %ul.social
-                          %li
-                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
-                              %i.fa.fa-facebook
-                          %li
-                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
-                              %i.fa.fa-twitter
-                          %li
-                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
-                              %i.fa.fa-dribbble
-                          %li
-                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
-                              %i.fa.fa-pinterest
-                          %li
-                            %a{:href => "https://www.behance.net/", :target => "_blank"}
-                              %i.fa.fa-behance
-                  .team-item-info
-                    %h5 Michael Lee
-                    %p Photographer
-          / End Team Carousel -
-      / End Team
-      / Action Box Section
-      %section#action-box.dark-bg.ptb-60
-        .container
-          .row
-            .col-md-8.col-sm-8
-              %h4 Donec sodales sagittis magna bibendum sodales Sed consequat?
-            .col-md-4.col-sm-4
-              %a.btn.btn-md.btn-white.float-right.float-none-xs Download
-      / End Action Box Section
-      / Work Section
-      %section#work.wow.fadeInUp.ptb.ptb-sm-80.text-center
-        .container
-          %h3 Our Work
-          .spacer-60
-          / work Filter
-          .row
-            %ul.container-filter.categories-filter.mb-0
-              %li
-                %a.categories.active{"data-filter" => "*"} All
-              %li
-                %a.categories{"data-filter" => ".branding"} Branding
-              %li
-                %a.categories{"data-filter" => ".design"} Design
-              %li
-                %a.categories{"data-filter" => ".photo"} Photo
-              %li
-                %a.categories{"data-filter" => ".coffee"} coffee
-          / End work Filter
-        / Work Gallary
-        .container
-          .row.container-grid.nf-col-3
-            .nf-item.branding.design.coffee.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/1.jpg", :title => "Consequat massa quis"}
-                  %img.item-container{:alt => "1", :src => "img/portfolio/1.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Consequat massa quis
-                      %p.white Branding, Design, Coffee
-            .nf-item.photo.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/2.jpg", :title => "Vivamus elementum semper"}
-                  %img.item-container{:alt => "2", :src => "img/portfolio/2.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Vivamus elementum semper
-                      %p.white Photo
-            .nf-item.branding.design.coffee.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/3.jpg", :title => "Quisque rutrum"}
-                  %img.item-container{:alt => "4", :src => "img/portfolio/3.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Quisque rutrum
-                      %p.white Branding, Design, Coffee
-            .nf-item.branding.design.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/4.jpg", :title => "Tellus eget condimentum"}
-                  %img.item-container{:alt => "4", :src => "img/portfolio/4.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Tellus eget condimentum
-                      %p.white Design
-            .nf-item.branding.design.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/5.jpg", :title => "Nullam quis ant"}
-                  %img.item-container{:alt => "5", :src => "img/portfolio/5.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Nullam quis ant
-                      %p.white Branding, Design
-            .nf-item.photo.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/6.jpg", :title => "Sed fringilla mauris"}
-                  %img.item-container{:alt => "6", :src => "img/portfolio/6.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Sed fringilla mauris
-                      %p.white Photo
-            .nf-item.design.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/7.jpg", :title => "Augue velit cursus"}
-                  %img.item-container{:alt => "7", :src => "img/portfolio/7.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Augue velit cursus
-                      %p.white Design
-            .nf-item.coffee.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/8.jpg", :title => "Donec sodales sagittis"}
-                  %img.item-container{:alt => "8", :src => "img/portfolio/8.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Donec sodales sagittis
-                      %p.white Coffee
-            .nf-item.photo.spacing
-              .item-box
-                %a.cbox-gallary1{:href => "img/portfolio/9.jpg", :title => "Donec sodales sagittis"}
-                  %img.item-container{:alt => "8", :src => "img/portfolio/9.jpg"}/
-                  .item-mask
-                    .item-caption
-                      %h5.white Donec sodales sagittis
-                      %p.white Coffee
-        / End Work Gallary
-        .spacer-30
-        .container
-          %a.btn.btn-md.btn-black-line{:href => "portfolio-grid-3col.html", :target => "_blank"} View All
-      / End Work Section
-      / Counter Section
-      %section#counter.overlay-dark80.light-color.ptb-80{"data-stellar-background-ratio" => "0.5", :style => "background-image: url('img/full/21.jpg');"}
-        .container.text-center
-          .row
-            .col-md-3.mb-sm-30
-              %h1.counter{"data-count" => "59"} 0
-              %h6 awards
-            .col-md-3.mb-sm-30
-              %h1.counter{"data-count" => "1054"} 0
-              %h6 Clients
-            .col-md-3.mb-sm-30
-              %h1.counter{"data-count" => "34"} 0
-              %h6 Team
-            .col-md-3.mb-sm-30
-              %h1.counter{"data-count" => "154"} 0
-              %h6 Project
-      / End Counter Section
       / Service Section
       %section#service.ptb.ptb-sm-80
         .wow.fadeInLeft.container.text-center
@@ -426,6 +118,159 @@
               %h5 Ui Design
               %p Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.
       / End Service Section
+      / Counter Section
+      %section#counter.overlay-dark80.light-color.ptb-80{"data-stellar-background-ratio" => "0.5", :style => "background-image: url('img/full/23.jpg');"}
+        .container.text-center
+          .row
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "59"} 0
+              %h6 awards
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "1054"} 0
+              %h6 Clients
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "34"} 0
+              %h6 Team
+            .col-md-3.mb-sm-30
+              %h1.counter{"data-count" => "154"} 0
+              %h6 Project
+      / End Counter Section
+      / Work Section
+      %section#work.wow.fadeIn.pt.pt-sm-80.text-center
+        .container
+          %h3 Great Work
+          .spacer-30
+          / work Filter
+          .row
+            %ul.container-filter.categories-filter
+              %li
+                %a.categories.active{"data-filter" => "*"} All
+              %li
+                %a.categories{"data-filter" => ".branding"} Branding
+              %li
+                %a.categories{"data-filter" => ".design"} Design
+              %li
+                %a.categories{"data-filter" => ".photo"} Photo
+              %li
+                %a.categories{"data-filter" => ".coffee"} coffee
+          / End work Filter
+        / Work Gallary
+        .container-fluid
+          .row
+            .container-grid.nf-col-4
+              .nf-item.branding.design.coffee
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/1.jpg", :title => "Consequat massa quis"}
+                    %img.item-container{:alt => "1", :src => "img/portfolio/1.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Consequat massa quis
+                        %p.white Branding, Design, Coffee
+              .nf-item.photo
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/2.jpg", :title => "Vivamus elementum semper"}
+                    %img.item-container{:alt => "2", :src => "img/portfolio/2.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Vivamus elementum semper
+                        %p.white Photo
+              .nf-item.branding.design.coffee
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/3.jpg", :title => "Quisque rutrum"}
+                    %img.item-container{:alt => "4", :src => "img/portfolio/3.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Quisque rutrum
+                        %p.white Branding, Design, Coffee
+              .nf-item.branding.design
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/4.jpg", :title => "Tellus eget condimentum"}
+                    %img.item-container{:alt => "4", :src => "img/portfolio/4.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Tellus eget condimentum
+                        %p.white Design
+              .nf-item.branding.design
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/5.jpg", :title => "Nullam quis ant"}
+                    %img.item-container{:alt => "5", :src => "img/portfolio/5.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Nullam quis ant
+                        %p.white Branding, Design
+              .nf-item.photo
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/6.jpg", :title => "Sed fringilla mauris"}
+                    %img.item-container{:alt => "6", :src => "img/portfolio/6.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Sed fringilla mauris
+                        %p.white Photo
+              .nf-item.design
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/7.jpg", :title => "Augue velit cursus"}
+                    %img.item-container{:alt => "7", :src => "img/portfolio/7.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Augue velit cursus
+                        %p.white Design
+              .nf-item.coffee
+                .item-box
+                  %a.cbox-gallary1{:href => "img/portfolio/8.jpg", :title => "Donec sodales sagittis"}
+                    %img.item-container{:alt => "8", :src => "img/portfolio/8.jpg"}/
+                    .item-mask
+                      .item-caption
+                        %h5.white Donec sodales sagittis
+                        %p.white Coffee
+        / End Work Gallary
+      / End Work Section
+      / Action Box Section
+      %section#action-box.dark-bg.ptb-60
+        .container
+          .row
+            .col-md-8.col-sm-8
+              %h4 Penatibus magnis dis parturient?
+              %p.mb-0 Porttitor eu consequat vitae 9hasellus viverra nulla ut metus varius laoreet vitae.
+            .col-md-4.col-sm-4
+              %a.btn.btn-md.btn-white.float-right.float-none-xs See All Work
+      / End Action Box Section
+      / Process
+      %section#process.ptb.ptb-sm-80
+        .wow.fadeInLeft.container.text-center
+          %h3 Easy Process
+          .spacer-60
+          .row
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step1 - Skype Interview"}
+                .page-icon-top
+                  %i.ion.ion-ios-people-outline
+                %h6 Interview
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step2 - Project Plan"}
+                .page-icon-top
+                  %i.ion.ion-ios-paper-outline
+                %h6 Plan
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step3 - Design"}
+                .page-icon-top
+                  %i.ion.ion-ios-compose-outline
+                %h6 Design
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step4 - Development"}
+                .page-icon-top
+                  %i.ion.ion-ios-gear-outline
+                %h6 Development
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step5 - Testing"}
+                .page-icon-top
+                  %i.ion.ion-ios-pulse
+                %h6 Testing
+            .col-md-2.col-sm-4.col-xs-6
+              .tipped{"data-tipper-options" => "{\"direction\":\"top\"}", "data-title" => "Step6 - Delivery"}
+                .page-icon-top
+                  %i.ion.ion-ios-clock-outline
+                %h6 Delivery
+      / End Process
       %hr/
       / Contant Slider Section
       %section#contant.wow.fadeIn.ptb.ptb-sm-80
@@ -621,94 +466,95 @@
               .spacer-15
               %a.cbox-iframe.btn.btn-md.btn-white{:href => "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"} Watch Video
       / End Statement Section
-      / Pricing Section
-      %section#pricing.ptb.ptb-sm-80
+      / Shop Item
+      %section#shop-item.pt.pt-sm-80
         .container.text-center
-          %h3 Pricing
+          %h3 Latest Product
           .spacer-60
           .row
-            .col-md-4.mtb-xs-30
-              .Pricing-box
-                .price-title.spacing-box
-                  %h4 Regular
-                %hr/
-                .spacing-box
-                  .price
-                    %span.price-sm $
-                    %span.price-lg 49
-                  .price-tenure per month
-                %hr/
-                .pricing-features.spacing-grid
-                  %ul
-                    %li Full Access
-                    %li
-                      1 Domain
-                      %strong Free
-                    %li Source Files
-                    %li
-                      %strong 50 User Accounts
-                    %li 6 Month License
-                    %li Premium Support
-                %hr/
-                .spacing-grid
-                  %a.btn.btn-md.btn-black Sign Up Today
-            .col-md-4.mtb-xs-30
-              .Pricing-box.highlight
-                .price-title.spacing-box
-                  %h4 Standard
-                %hr/
-                .spacing-box
-                  .price
-                    %span.price-sm $
-                    %span.price-lg 79
-                  .price-tenure per month
-                %hr/
-                .pricing-features.spacing-grid
-                  %ul
-                    %li Full Access
-                    %li
-                      1 Domain
-                      %strong Free
-                    %li Source Files
-                    %li
-                      %strong 500 User Accounts
-                    %li 6 Month License
-                    %li Premium Support
-                %hr/
-                .spacing-grid
-                  %a.btn.btn-md.btn-black Sign Up Today
-            .col-md-4
-              .Pricing-box
-                .price-title.spacing-box
-                  %h4 Advanced
-                %hr/
-                .spacing-box
-                  .price
-                    %span.price-sm $
-                    %span.price-lg 109
-                  .price-tenure per month
-                %hr/
-                .pricing-features.spacing-grid
-                  %ul
-                    %li Full Access
-                    %li
-                      1 Domain
-                      %strong Free
-                    %li Source Files
-                    %li
-                      %strong 5000 User Accounts
-                    %li 6 Month License
-                    %li Free Support
-                %hr/
-                .spacing-grid
-                  %a.btn.btn-md.btn-black Sign Up Today
-      / End Pricing Section
-      %hr/
+            .col-md-3.col-sm-6
+              .item-box
+                / Shop item images
+                .shop-item
+                  .item-img
+                    %img{:src => "img/product/07.jpg"}/
+                  .item-mask
+                    .item-mask-detail
+                      .item-mask-detail-ele
+                        %a.btn.btn-line-xs.btn-white-line
+                          %i.fa.fa-shopping-cart>
+                          Add To Cart
+                / End Shop item images
+                / Shop item info
+                .shop-item-info
+                  %a{:href => "shop-detail.html"}
+                    %h6.shop-item-name Veritatis et quasi
+                  .shop-item-price
+                    %span $399.00
+                / Shop item info
+            .col-md-3.col-sm-6
+              .item-box
+                / Shop item images
+                .shop-item
+                  .item-img
+                    %img{:src => "img/product/01.jpg"}/
+                  .item-mask
+                    .item-mask-detail
+                      .item-mask-detail-ele
+                        %a.btn.btn-line-xs.btn-white-line
+                          %i.fa.fa-shopping-cart>
+                          Add To Cart
+                / End Shop item images
+                / Shop item info
+                .shop-item-info
+                  %a{:href => "shop-detail.html"}
+                    %h6.shop-item-name Sed fringilla mauris
+                  .shop-item-price
+                    %span $399.00
+                / Shop item info
+            .col-md-3.col-sm-6
+              .item-box
+                / Shop item images
+                .shop-item
+                  .item-img
+                    %img{:src => "img/product/02.jpg"}/
+                  .item-mask
+                    .item-mask-detail
+                      .item-mask-detail-ele
+                        %a.btn.btn-line-xs.btn-white-line
+                          %i.fa.fa-shopping-cart>
+                          Add To Cart
+                / End Shop item images
+                / Shop item info
+                .shop-item-info
+                  %a{:href => "shop-detail.html"}
+                    %h6.shop-item-name Beatae vitae dicta
+                  .shop-item-price
+                    %span $399.00
+                / Shop item info
+            .col-md-3.col-sm-6
+              .item-box
+                / Shop item images
+                .shop-item
+                  .item-img
+                    %img{:src => "img/product/03.jpg"}/
+                  .item-mask
+                    .item-mask-detail
+                      .item-mask-detail-ele
+                        %a.btn.btn-line-xs.btn-white-line
+                          %i.fa.fa-shopping-cart>
+                          Add To Cart
+                / End Shop item images
+                / Shop item info
+                .shop-item-info
+                  %a{:href => "shop-detail.html"}
+                    %h6.shop-item-name Voluptas nulla pariatur
+                  .shop-item-price
+                    %span $399.00
+                / Shop item info
+      / End Shop Item
       / Client Logos Section
       %section#client-logos.wow.fadeIn.ptb.ptb-sm-80
-        .container.text-center
-          %h3 Recent Clients
-        .spacer-60
         .container
           .owl-carousel.client-carousel.nf-carousel-theme
             .item
@@ -742,104 +588,87 @@
               .client-logo
                 %img{:alt => "", :src => "img/logos/03.png"}/
       / End Client Logos Section
-      / Social Section
-      %section#social.gray-bg.ptb.ptb-sm-80
-        .container.text-center
-          .row
-            .col-md-8.col-md-offset-2
-              %h3 Get Connect With Us
-          .spacer-60
-          .row
-            .col-md-8.col-md-offset-2
-              .row
-                .col-md-3.col-sm-4.col-xs-6
-                  .page-icon-top
-                    %i.ion.ion-social-twitter
-                  %h6
-                    %a.link{:href => "https://www.twitter.com/", :target => "_blank"} Twitter
-                .col-md-3.col-sm-4.col-xs-6
-                  .page-icon-top
-                    %i.ion.ion-social-facebook
-                  %h6
-                    %a.link{:href => "https://www.facebook.com/", :target => "_blank"} Facebook
-                .col-md-3.col-sm-4.col-xs-6
-                  .page-icon-top
-                    %i.ion.ion-social-googleplus
-                  %h6
-                    %a.link{:href => "https://plus.google.com/", :target => "_blank"} Google plus
-                .col-md-3.col-sm-4.col-xs-6
-                  .page-icon-top
-                    %i.fa.fa-linkedin
-                  %h6
-                    %a.link{:href => "https://www.linkedin.com/", :target => "_blank"} Linkedin
-      / End Social Section
-      / Contact Section
-      %section#contact-section.ptb.ptb-sm-80
-        .container
-          .row
-            .col-md-8.col-md-offset-2.text-center
-              %h3 Get In Touch
-          .spacer-75
-          .row
-            .col-md-6.col-md-offset-3
-              / Contact FORM
-              %form#contact.contact-form{:role => "form"}
-                / IF MAIL SENT SUCCESSFULLY
-                %h6.successContent
-                  %i.fa.fa-check.left{:style => "color: #5cb45d;"}>
-                  Your message has been sent successfully.
-                / END IF MAIL SENT SUCCESSFULLY
-                / MAIL SENDING UNSUCCESSFULL
-                %h6.errorContent
-                  %i.fa.fa-exclamation-circle.left{:style => "color: #e1534f;"}>
-                  There was a problem validating the form please check!
-                / END MAIL SENDING UNSUCCESSFULL
-                .form-field-wrapper
-                  %input#form-name.input-sm.form-full{:name => "form-name", :placeholder => "Your Name", :required => "", :type => "text"}/
-                .form-field-wrapper
-                  %input#form-email.input-sm.form-full{:name => "form-email", :placeholder => "Email", :required => "", :type => "email"}/
-                .form-field-wrapper
-                  %input#form-subject.input-sm.form-full{:name => "form-subject", :placeholder => "Subject", :type => "text"}/
-                .form-field-wrapper
-                  %textarea#form-message.form-full{:name => "form-message", :placeholder => "Your Message", :required => "", :rows => "7"}
-                %button#form-submit.btn.btn-md.btn-black.form-full{:name => "submit", :type => "submit"} Send Message
-              / END Contact FORM
-      / Contact Section
-      %hr/
-      %section#contact-info.ptb.ptb-sm-80
-        .container
-          .row
-            .col-md-4
-              .contact-box-left
-                .contact-icon-left
-                  %i.ion.ion-ios-location
-                %h6 Address
-                %p
-                  502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.
-            .col-md-4
-              .contact-box-left
-                .contact-icon-left
-                  %i.ion.ion-ios-telephone
-                %h6 Call Us
-                %p
-                  %span +40 (0) 012 345 6789
-                  %br/
-            .col-md-4
-              .contact-box-left
-                .contact-icon-left
-                  %i.ion.ion-ios-email
-                %h6 Email
-                %p
-                  %a{:href => "mailto:yourname@domain.com"} yourname@domain.com
-      / Map Section
-      %section.map
-        #map
-      / Map Section
       / END CONTENT --------------------------------------------------------------------------
       / FOOTER
       %footer.footer.pt-80
+        .container
+          .row.mb-60
+            / Logo
+            .col-md-3.col-sm-3.col-xs-12.mb-xs-30
+              %a.footer-logo{:href => "home.html"}
+                %img{:src => "img/logo-black.png"}/
+            / Logo
+            / Newsletter
+            .col-md-4.col-sm-5.col-xs-12.mb-xs-30
+              .newsletter
+                %form
+                  %input.newsletter-input.input-md.newsletter-input.mb-0{:placeholder => "Enter Your Email", :type => "email"}/
+                  %button.newsletter-btn.btn.btn-xs.btn-white{:type => "submit", :value => ""}
+                    %i.fa.fa-angle-right.mr-0
+            / End Newsletter
+            / Social
+            .col-md-3.col-md-offset-2.col-sm-4.col-xs-12
+              %ul.social
+                %li
+                  %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "https://instagram.com/", :target => "_blank"}
+                    %i.fa.fa-instagram
+                %li
+                  %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "https://vimeo.com/", :target => "_blank"}
+                    %i.fa.fa-vimeo-square
+                %li
+                  %a{:href => "https://www.behance.net/", :target => "_blank"}
+                    %i.fa.fa-behance
+            / End Social
+          / Footer Info
+          .row.footer-info.mb-60
+            .col-md-3.col-sm-12.col-xs-12.mb-sm-30
+              %p.mb-xs-0 Our ante tincidunt tempus, Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.
+              %a.btn-link-a{:href => "about-1.html"} Read More
+            .col-md-3.col-sm-6.col-xs-12.mb-sm-30.mb-xs-0
+              %ul.link
+                %li
+                  %a{:href => "blog-grid-3col.html"} Blog
+                %li
+                  %a{:href => "portfolio-grid-3col.html"} Portfolio
+                %li
+                  %a{:href => "login-register.html"} Login &amp; Signup
+                %li
+                  %a{:href => "faq-1.html"} FAQ
+                %li
+                  %a{:href => "about-1.html"} About
+                %li
+                  %a{:href => "service-1.html"} Service
+            .col-md-3.col-sm-6.col-xs-12.mb-sm-30
+              %ul.link
+                %li
+                  %a{:href => "contact-1.html"} Contact Us
+                %li
+                  %a{:href => "shop-checkout.html"} Shopping Cart
+                %li
+                  %a{:href => "404-error-1.html"} 404 Error
+                %li
+                  %a{:href => "home.html"} Home
+            .col-md-3.col-sm-12.col-xs-12
+              %p 502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.
+              %ul.link-small
+                %li
+                  %a{:href => "mailto:yourname@domain.com"}
+                    %i.fa.fa-envelope-o.left>
+                    yourname@domain.com
+                %li
+                  %a
+                    %i.fa.fa-phone.left>
+                    +40 (0) 012 345 6789
+          / End Footer Info
+        %hr/
         / Copyright Bar
-        %section.copyright.pb-60
+        %section.copyright.ptb-60
           .container
             %p
               © 2015
@@ -874,29 +703,6 @@
     %script{:src => "js/plugin/imagesloaded.pkgd.min.js", :type => "text/javascript"}
     %script{:src => "js/plugin/jquery.fs.tipper.min.js", :type => "text/javascript"}
     %script{:src => "js/plugin/mediaelement-and-player.min.js"}
-    %script{:src => "js/plugin/jquery.validate.min.js", :type => "text/javascript"}
-    %script{:src => "js/theme.js", :type => "text/javascript"}
     %script{:src => "js/plugin/sidebar-menu.js", :type => "text/javascript"}
+    %script{:src => "js/theme.js", :type => "text/javascript"}
     %script{:src => "js/navigation.js", :type => "text/javascript"}
-    %script{:src => "js/plugin/jquery.singlePageNav.js", :type => "text/javascript"}
-    %script{:src => "js/contact-form.js", :type => "text/javascript"}
-    %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
-    %script{:src => "js/map.js", :type => "text/javascript"}
-    :javascript
-      //  Onepage Nav Elements
-      $('.singlepage-nav').singlePageNav({
-          offset: 0,
-          filter: ':not(.external)',
-          updateHash: true,
-          currentClass: 'current',
-          easing: 'swing',
-          speed: 750,
-          beforeStart: function () {
-              if ($(window).width() < 991) {
-                  $('.singlepage-nav > ul').hide();
-              };
-          },
-          onComplete: function () {
-              console.log('done scrolling');
-          }
-      });

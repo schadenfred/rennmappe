@@ -1,26 +1,15 @@
-- content_for :nav_links do
-  .nav-menu.singlepage-nav
-    %ul.nav-menu-inner
-      %li
-        = link_to('home', "#intro")
-      - if user_signed_in?
-        %li
-          = link_to('sign out', destroy_user_session_path)
-      - else
-        %li
-          = link_to('sign in', "#sign-in-form")
+!!!
+%html{:lang => "en"}
+  %head
+    = render "head"
+    = stylesheet_link_tag "static"
+  %body
 
-      - if user_signed_in?
-        %li
-          = link_to('settings', edit_user_registration_path)
-      - else
-        %li
+    .wrapper
+      = render "header"
 
-- content_for :stylesheets do
-  = stylesheet_link_tag "application"
-- content_for :javascripts do
-  = javascript_include_tag "static"
+      = yield
+      %footer#footer.footer.section-padding.gray-bg
+        = render "footer"
+    = javascript_include_tag "static"
 
-
-
-= render template: "layouts/application"
