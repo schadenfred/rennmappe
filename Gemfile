@@ -20,6 +20,9 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 # gem 'rails', github: 'rails/rails'
 
+gem 'ember-cli-rails'
+
+
 gem 'galleriable', github: 'schadenfred/galleriable'#, require: false
 
 gem 'devise'
