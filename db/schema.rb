@@ -10,11 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322021424) do
+ActiveRecord::Schema.define(version: 20170325015256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "checks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "parent_id"
+    t.integer  "org_id"
+    t.integer  "range_low"
+    t.integer  "range_high"
+    t.integer  "author_id"
+    t.boolean  "internal_check"
+    t.string   "measure_units"
+    t.boolean  "required"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["author_id"], name: "index_checks_on_author_id", using: :btree
+    t.index ["name"], name: "index_checks_on_name", using: :btree
+    t.index ["org_id"], name: "index_checks_on_org_id", using: :btree
+    t.index ["parent_id"], name: "index_checks_on_parent_id", using: :btree
+  end
 
   create_table "galleriable_galleries", force: :cascade do |t|
     t.string   "name"

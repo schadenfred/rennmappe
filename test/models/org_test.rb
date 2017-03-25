@@ -21,6 +21,7 @@ describe Org do
 
   specify "associations" do
 
+    must_have_many(:checks)
     must_have_many(:users)
     must_have_many(:orgs_users)
   end
