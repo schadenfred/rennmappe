@@ -45,8 +45,12 @@ guard :minitest, spring: "bin/rails test" do
 
   watch(%r{^app/policies/application_policy\.rb$})        { |m|
     "test/policies" }
-  watch(%r{^app/controllers/application_controller\.rb$}) {
-    'test/controllers' }
+
+  watch(%r{^app/controllers/application_controller\.rb$}) {'test/controllers' }
+
+  watch(%r{^test/controllers/json/(.+)/.+\.json})        { |m|
+    "test/controllers/#{m[1]}_controller_test.rb" }
+
   watch(%r{^app/controllers/(.+)_controller\.rb$})        { |m|
     "test/integration/#{m[1]}_test.rb" }
   watch(%r{^app/views/(.+)_mailer/.+})                    { |m|
@@ -57,6 +61,9 @@ guard :minitest, spring: "bin/rails test" do
   watch(%r{^test/integration/.+_test\.rb$})
   watch(%r{^test/policies/.+_test\.rb$})
   watch(%r{^test/test_helper\.rb$}) { 'test' }
+
+  watch(%r{^test/support/(.+).rb$}) { 'test' }
+
   watch(%r{^test/factories/(.+).rb$}) { 'test' }
 
   # concerns

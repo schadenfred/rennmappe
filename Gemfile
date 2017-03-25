@@ -51,6 +51,9 @@ gem 'seedbank'
 gem 'font-awesome-rails'
 gem 'ionicons-rails'
 
+
+gem 'active_model_serializers', '~> 0.10.0'
+
 source 'https://rails-assets.org' do
     gem 'rails-assets-tether', '>= 1.1.0'
   end
@@ -90,6 +93,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'minitest-given'
 
+  # required for testing serializers
+  gem 'json_schema'
   # mocks & stubs
   gem 'mocha'
 

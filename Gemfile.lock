@@ -44,6 +44,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.10.5)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.2)
     activejob (5.0.0.1)
       activesupport (= 5.0.0.1)
       globalid (>= 0.3.6)
@@ -80,6 +85,8 @@ GEM
     capybara-email (2.5.0)
       capybara (~> 2.4)
       mail
+    case_transform (0.2)
+      activesupport
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
@@ -190,6 +197,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
+    json_schema (0.16.1)
+    jsonapi-renderer (0.1.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.0.8)
@@ -362,6 +371,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.0)
   backstretch-rails
   bootstrap (~> 4.0.0.alpha6)
   byebug
@@ -382,6 +392,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
+  json_schema
   launchy
   listen (~> 3.0.5)
   minitest-given

@@ -8,3 +8,9 @@ names.each do |name|
   )
   user.confirm
 end
+
+users = User.all
+
+org = Org.create(name: "flatsix")
+
+org.checks.create(name: "mileage")

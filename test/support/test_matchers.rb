@@ -1,5 +1,11 @@
 module TestMatchers
 
+  def json_fixture
+    klass = self.class.name.split("::#").first.split("Controller").first.downcase
+    action = self.class.name.split("::#").last
+    JSON.parse(File.read(Rails.root.join("test", "controllers", "json", klass.pluralize, "#{action}.json")))
+  end
+
   def must_respond_to(method)
     s = subject
     s.respond_to?(method).must_equal true
