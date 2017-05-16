@@ -57,3 +57,4 @@ pickle-email-*.html
 /config/application.yml
 /public/dev_assets/*
 /public/system/dragonfly/*
+rennmappe.pem
