@@ -38,9 +38,7 @@
 
 
 
-
-
 var http = require("http");
 setInterval(function() {
-    http.get("http://rennmappe");
+    http.get("http://sea-knight.herokuapp.com");
 }, 300000); // every 5 minutes (300000)
